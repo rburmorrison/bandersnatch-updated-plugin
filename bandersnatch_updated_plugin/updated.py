@@ -13,7 +13,7 @@ logger = logging.getLogger("bandersnatch")
 
 
 class UpdatedFilter(FilterMetadataPlugin, Filter):
-    """Plugin to only download packages with a recent release."""
+    """Plugin to only download packages that were released recently."""
 
     name = "updated"
     minimum_date: datetime
@@ -25,12 +25,12 @@ class UpdatedFilter(FilterMetadataPlugin, Filter):
         except KeyError:
             return
 
-        maximum_years = int(config["maximum_years"])
+        maximum_days = int(config["maximum_days_old"])
         self.minimum_date = datetime.now(timezone.utc) - relativedelta(
-            years=maximum_years
+            days=maximum_days
         )
 
-        logger.info(f"Initialized updated plugin with maximum_years={maximum_years}")
+        logger.info(f"Initialized updated plugin with maximum_days_old={maximum_days}")
 
         self.initialized = True
 

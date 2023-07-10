@@ -4,7 +4,7 @@ A [bandersnatch](https://pypi.org/project/bandersnatch/) plugin to filter out
 old packages.
 
 This plugin works by checking if the `upload_time` field in a package's release
-file is older than a given number of years.
+file is older than a given number of days, and filtering it out if it is.
 
 ## Configuration
 
@@ -17,7 +17,7 @@ enabled =
     updated
 
 [updated]
-maximum_years = 3
+maximum_days_old = 1095
 ```
 
-Change `maximum_years` to your desired age.
+Change `maximum_days_old` to your desired age.
