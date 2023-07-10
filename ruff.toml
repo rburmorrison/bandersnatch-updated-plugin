@@ -1,0 +1,3 @@
+select = ["F", "W", "E", "D", "ANN"]
+ignore = ["D212", "D203"]
+exclude = ["__init__.py"]
