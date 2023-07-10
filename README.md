@@ -6,7 +6,7 @@ old packages.
 This plugin works by checking if the `upload_time` field in a package's release
 file is older than a given number of years.
 
-# Configuration
+## Configuration
 
 To use, install this package and add the following to your `bandersnatch.conf`:
 
