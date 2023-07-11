@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-bandersnatch = "*"
-python-dateutil = "*"
+bandersnatch = "==6.3.0"
+python-dateutil = "==2.8.2"
 
 [dev-packages]
 
